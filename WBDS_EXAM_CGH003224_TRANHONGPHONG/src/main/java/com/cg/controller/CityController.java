@@ -97,7 +97,7 @@ public class CityController {
         City city = cityDTO.toCity(nation.get());
         city.setId(0L);
 //        city.getNation().setId()
-        modelAndView = new ModelAndView("/city/list");
+        modelAndView = new ModelAndView("/city/create");
         cityService.save(city);
 
         cities = cityService.findAll();
@@ -229,13 +229,13 @@ public class CityController {
         City city = cityDTO.toCity(nation.get());
         city.setId(cityDTO.getId());
 
-        modelAndView = new ModelAndView("/city/list");
+        modelAndView = new ModelAndView("/city/edit");
         cityService.save(city);
 
         Iterable<City> cities = cityService.findAll();
         modelAndView.addObject("cities",cities);
         modelAndView.addObject("nations",nations);
-        
+
         modelAndView.addObject("success", "ĐÃ SỬA THÀNH CÔNG!");
         return modelAndView;
     }

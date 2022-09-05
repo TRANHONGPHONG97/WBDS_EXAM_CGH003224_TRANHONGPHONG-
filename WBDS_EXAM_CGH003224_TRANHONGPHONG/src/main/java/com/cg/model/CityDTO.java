@@ -18,7 +18,7 @@ public class CityDTO {
     private Long id;
 
     @NotBlank(message = "Tên thành phố không được để trống!")
-    @Size(min = 5, max = 30, message = "Tên thành phố phải từ 5-30 kí tự!")
+    @Size(min = 3, max = 30, message = "Tên thành phố phải từ 3-30 kí tự!")
     private String cityName;
 
     @NotBlank(message = "Tên quốc gia không được để trống!")
