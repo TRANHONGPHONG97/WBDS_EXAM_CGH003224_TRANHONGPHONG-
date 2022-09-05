@@ -5,8 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @NoArgsConstructor
@@ -19,6 +22,7 @@ public class CityDTO {
 
     @NotBlank(message = "Tên thành phố không được để trống!")
     @Size(min = 3, max = 30, message = "Tên thành phố phải từ 3-30 kí tự!")
+//    @Pattern(regexp = "^[a-zA-Z]+$", message = "Tên thành phố phải là chữ, không có kí tự đặc biệt và số")
     private String cityName;
 
     @NotBlank(message = "Tên quốc gia không được để trống!")
@@ -46,4 +50,5 @@ public class CityDTO {
                 .setPopulation(Integer.parseInt(population))
                 .setDescription(description);
     }
+
 }
