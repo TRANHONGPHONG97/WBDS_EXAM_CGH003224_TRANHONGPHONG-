@@ -132,11 +132,15 @@
 
             </div>
             <!-- end row -->
-            <div class="footer">
-                <div id="message-alert">
-                    <div class="fixed-bottom alert alert-success" th:text="${message}"></div>
+            <th:block th:if="${success}">
+                <div class="success">
+                    <div class="container">
+                        <ul>
+                            <li th:text="${success}"></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </th:block>
             <th:block th:if="${hasError} == true">
                 <div class="fixed-bottom alert alert-danger">
                     <h5>Please correct errors below:</h5>

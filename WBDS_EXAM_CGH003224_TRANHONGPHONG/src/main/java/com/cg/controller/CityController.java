@@ -90,7 +90,6 @@ public class CityController {
             modelAndView.addObject("hasError",true);
             modelAndView.addObject("errors",errors);
             modelAndView.addObject("nations",nations);
-            modelAndView.addObject("message", "ĐÃ TẠO MỚI THÀNH CÔNG!");
             return modelAndView;
         }
 
@@ -104,6 +103,7 @@ public class CityController {
         cities = cityService.findAll();
 
         modelAndView.addObject("cities",cities);
+        modelAndView.addObject("success", "ĐÃ TẠO MỚI THÀNH CÔNG!");
 
         return modelAndView;
     }
@@ -220,7 +220,7 @@ public class CityController {
             modelAndView.addObject("errors",errors);
             modelAndView.addObject("nations",nations);
             modelAndView.addObject("city",city);
-            modelAndView.addObject("message", "ĐÃ SỬA THÀNH CÔNG!");
+
             return modelAndView;
         }
 
@@ -235,7 +235,8 @@ public class CityController {
         Iterable<City> cities = cityService.findAll();
         modelAndView.addObject("cities",cities);
         modelAndView.addObject("nations",nations);
-
+        
+        modelAndView.addObject("success", "ĐÃ SỬA THÀNH CÔNG!");
         return modelAndView;
     }
 }
