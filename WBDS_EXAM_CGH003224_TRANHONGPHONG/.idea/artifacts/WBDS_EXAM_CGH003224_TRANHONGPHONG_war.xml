@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="WBDS_EXAM_CGH003224_TRANHONGPHONG:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>WBDS_EXAM_CGH003224_TRANHONGPHONG</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="WBDS_EXAM_CGH003224_TRANHONGPHONG-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="WBDS_EXAM_CGH003224_TRANHONGPHONG:war exploded" />
+    </root>
+  </artifact>
+</component>
